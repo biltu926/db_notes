@@ -1,0 +1,20 @@
+1. Connecting to mongo
+mongo
+
+2. List dbs
+show dbs
+
+3. Use a specific db.
+use db_name
+
+4. Count records in a collection
+db.loans.find().count()
+
+5. Show all the records.
+db.loans.find()
+
+6. Show records with given condition, and then count the records.
+db.lender_loans.find({"ages": {"$gt": 12}}).count()
+
+7. Sort records before displaying. [ 1 indicates ascending, and -1 indicates descending order]
+db.lender_loans.find({"ages": {"$gt": 65}}).sort({"loan_amount": 1})
